@@ -23,6 +23,9 @@ module.exports = {
                 test: /\.(png|jpg|ttf)$/,
                 loader: 'url',
                 query: {limit: 10000000},
+            },{
+                test: /\.json$/,
+                loader: 'json',
             },
         ],
     },

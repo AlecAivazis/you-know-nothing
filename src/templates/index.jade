@@ -4,7 +4,14 @@ mixin test(title, description, id)
   div(class=word)= title + ' ' + description
     
 block content
-    + test(
-        'hello',
-        'foo'
-    )
+    each option, index in options
+        section.voteOption(class=option.orientation, style="background-color: " + option.color)
+            img(src="/static/images/" + option.image)
+            span.voteInfo
+                div.label= "Theory " + option.number
+                h1.title= option.title
+                p.description= option.description
+                if option.buttonColor
+                    button.cta vote
+                else
+                    button.cta votea

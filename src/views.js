@@ -5,8 +5,17 @@ import {Vote} from './models'
 // the index view
 export const index = (req, res) => res.render('index.jade')
 
+
 // the result summary
-export const results = (req, res) => res.render('results.jade')
+export const results = async function (req, res) {
+    // connect to the database
+    await Vote.sync()
+    // the votes grouped by option
+    const data = await Vote.count({group:'option'})
+    // render the template with the aggregated data
+    return res.render('results.jade', {data})
+}
+
 
 // adds a vote for the appropriate category
 export const addVote = async function(req, res) {
@@ -15,16 +24,16 @@ export const addVote = async function(req, res) {
 
     try {
         // connect to the database
-        await Vote.sync({force: true})
+        await Vote.sync()
         // create a new vote corresponding to the category
         await Vote.create({option})
         // redirect to the results page
-        res.redirect('/results')
+        return res.redirect('/results')
 
     // if something goes wrong
     } catch (err) {
         console.log("ERROR: " + err)
         // tell the user we had a problem
-        res.status(500).send(err)
+        return res.status(500).send(err)
     }
 }

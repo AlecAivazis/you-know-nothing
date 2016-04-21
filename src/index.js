@@ -13,7 +13,7 @@ import {
     assetsDir,
     templatesDir,
 } from 'config/projectPaths'
-
+import {index, results, addVote} from './views'
 
 const app = express()
 
@@ -33,12 +33,15 @@ app.set('views', templatesDir)
 app.use(logger('dev'))
 // compress responses
 app.use(compression())
+
+
 /* Routing */
 
 // route static files to build and assets dirs
 app.use('/static', serveStatic(buildDir), serveStatic(assetsDir))
-app.get('/results', (req, res) => res.render('results.jade'))
-app.get('/', (req, res) => res.render('index.jade'))
+app.get('/results', results)
+app.post('/vote', addVote)
+app.get('/', index)
 
 // interpret first arg from command line as port number
 const port = parseInt(process.argv[2])

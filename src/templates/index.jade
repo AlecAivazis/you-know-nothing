@@ -1,0 +1,10 @@
+extends base
+
+mixin test(title, description, id)
+  div(class=word)= title + ' ' + description
+    
+block content
+    + test(
+        'hello',
+        'foo'
+    )

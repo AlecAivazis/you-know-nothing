@@ -38,7 +38,7 @@ app.use(compression())
 // route static files to build and assets dirs
 app.use('/static', serveStatic(assetsDir))
 app.get('/results', results)
-app.post('/vote', addVote)
+app.get('/vote', addVote)
 app.get('/', index)
 
 // interpret first arg from command line as port number

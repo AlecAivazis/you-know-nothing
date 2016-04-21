@@ -30,7 +30,14 @@ export const results = async (req, res) => {
     // connect to the database
     await Vote.sync()
     // the votes grouped by option
-    const data = await Vote.count({group:'option'})
+    // const data = await Vote.count({group:'option'})
+    const data = {
+        0: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+        ...await Vote.count({group:'option'})
+    }
     // render the template with the aggregated data
     return res.render('results.jade', {data})
 }

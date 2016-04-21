@@ -11,7 +11,8 @@ block content
                 div.label= "Theory " + option.number
                 h1.title= option.title
                 p.description= option.description
-                if option.buttonColor
-                    button.cta vote
-                else
-                    button.cta votea
+                a(href="/vote?option=" + index)
+                    if option.buttonColor
+                        button.cta vote
+                    else
+                        button.cta votea

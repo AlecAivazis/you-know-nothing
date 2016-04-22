@@ -30,16 +30,22 @@ export const results = async (req, res) => {
     // connect to the database
     await Vote.sync()
     // the votes grouped by option
-    // const data = await Vote.count({group:'option'})
-    const data = {
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        ...await Vote.count({group:'option'})
-    }
+    const vote_counts = await Vote.count({group:'option'})
+    // create a list of counts from the result
+    const counts = Object.keys(vote_counts).map(key => vote_counts[key]['count'])
+
+    // add the count to the options
+    const data = option_source['options'].map((entry, index) => ({
+        ...entry,
+        count: counts[index]
+    }))
+
+    // compute the necessary bits of data to produce the visualization
+    const total = counts.reduce((prev, current) => prev + current, 0)
+    const max = counts.reduce((prev, current) => current > prev ? current : prev, 0)
+
     // render the template with the aggregated data
-    return res.render('results.jade', {data})
+    return res.render('results.jade', {data, total, max})
 }
 
 

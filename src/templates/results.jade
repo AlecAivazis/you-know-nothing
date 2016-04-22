@@ -2,12 +2,31 @@ extends base
 
 block head 
     link(rel="stylesheet", href="/static/styles/results.css")
+  
 
 block content
     header
         img(src="/static/images/title.svg")
     div#results
-        div= data[0].count
-        div= data[1].count
-        div= data[2].count
-        div= data[3].count
+        for entry in data
+            div.result
+                img(src="/static/images/" + entry.name + '.svg')
+                div.info
+                    div.text
+                        div.title= entry.title
+                        div.percent
+                            !{Math.round(entry.count / total * 100)}
+                            | %                
+                    div.bar
+                        div.value(class=entry.name, style="width:" + entry.count/max * 100 + '%')
+
+    footer
+        #credit
+            | A collaboration by:  
+            ul 
+                li 
+                    a(href="http://www.ashleyromo.com") Ashley Romo
+                li 
+                    a(href="http://www.charliemaynard.com") Charlie Maynard
+                li 
+                    a(href="http://alec.aivazis.com")  Alec Aivazis

@@ -20,7 +20,7 @@
     "url": "https://github.com/AlecAivazis/you-know-nothing/issues"
   },
   "homepage": "https://github.com/AlecAivazis/you-know-nothing",
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.7.6",
     "babel-eslint": "^6.0.2",
     "babel-preset-es2015": "^6.6.0",
@@ -38,9 +38,7 @@
     "url-loader": "^0.5.7",
     "vinyl-named": "^1.1.0",
     "webpack": "^1.13.0",
-    "webpack-stream": "^3.1.0"
-  },
-  "dependencies": {
+    "webpack-stream": "^3.1.0",
     "babel-loader": "^6.2.4",
     "babel-polyfill": "^6.7.4",
     "babel-preset-es2015": "^6.6.0",

@@ -8,10 +8,10 @@ block content
         img.splash(src="/static/images/title.svg")
         div.intro
             | We know nothing, Jon Snow—but we’ll make our best guess. We’ve broken down the top four theories on Jon’s return in season six. Take a look for yourself and cast your vote below.
-        img.mountains(src="/static/images/splash.svg")
+        img.mountains(src="/static/images/mountains@2x.png")
     each option, index in options
         section.voteOption(class=option.orientation + ' ' + option.name)
-            img(src="/static/images/" + option.name + '.svg')
+            img(src="/static/images/" + option.name + '@2x.png')
             span.voteInfo
                 div.label= "Theory " + option.number
                 h1.title= option.title

@@ -113,8 +113,8 @@ img.splash {
 }
 
 img.mountains {
-    max-height: 185px;
-    margin-bottom: -15px;
+    max-height: 250px;
+    margin-bottom: -5%;
 }
 
 .voteOption {

@@ -15,7 +15,7 @@ block content
                     div.text
                         div.title= entry.title
                         div.percent
-                            !{Math.round(entry.count / total * 100)}
+                            !{Math.round(entry.count / (total || 1) * 100)}
                             | %                
                     div.bar
                         div.value(class=entry.name, style="width:" + entry.count/max * 100 + '%')

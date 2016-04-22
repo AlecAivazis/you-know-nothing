@@ -1,3 +1,5 @@
+// external imports
+import sequelize from 'sequelize'
 // local imports
 import {Vote} from './models'
 import option_source from '../options.json'
@@ -29,22 +31,36 @@ export const index = (req, res) => {
 export const results = async (req, res) => {
     // connect to the database
     await Vote.sync()
-    // the votes grouped by option
-    const vote_counts = await Vote.count({group:'option'})
-    // create a list of counts from the result
-    const counts = Object.keys(vote_counts).map(key => vote_counts[key]['count'])
+    const vote_count_records = await Vote.findAll({
+        attributes: {
+            include: [[sequelize.fn('COUNT', sequelize.col('option')), 'count']]
+        },
+        group: 'option'
+    })
+    // a simpler datastructure to work w ith
+    const count_entries = vote_count_records.map(entry => entry.dataValues)
 
-    // add the count to the options
-    const data = option_source['options'].map((entry, index) => ({
+    // retrieve the count for the given option
+    const get_count = (option) => {
+        // the appropriate entry
+        const entry = count_entries.filter(record => record.option == option)[0]
+        // return the count if the entry is present
+        return entry ? entry.count : 0
+    }
 
+    // // add the count to the options
+    const data = option_source['options'].map(entry => ({
         ...entry,
-        count: counts[index] || 0
+        count: get_count(entry.name)
     }))
+
+    // create a list of counts from the result
+    const counts = data.map(({count}) => count)
 
     // compute the necessary bits of data to produce the visualization
     const total = counts.reduce((prev, current) => prev + current, 0)
     const max = counts.reduce((prev, current) => current > prev ? current : prev, 0)
-    console.log(data.map(({count}) => ({count})))
+
     // render the template with the aggregated data
     return res.render('results.jade', {data, total, max})
 }

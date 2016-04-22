@@ -16,7 +16,7 @@ block content
                 div.label= "Theory " + option.number
                 h1.title= option.title
                 p.description= option.description
-                a(href="/vote?option=" + index)
+                a(href="/vote?option=" + option.name)
                     button.cta(class=option.name) vote
     footer
         #credit

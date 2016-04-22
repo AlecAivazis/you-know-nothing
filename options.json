@@ -1,28 +1,24 @@
 {
     "options": [
         {
+            "name": "warg",
             "title": "Warg into a wolf.",
-            "description": "It’s a fact that Jon has the ability to warg into his trusted dire wolf companion, ghost. At the end of the fifth book, as he lay bleeding out after being betrayed by the Night’s Watch, his last word is “Ghost”. It wouldn’t be crazy to assume Jon will return to us in the form of his hairy wingman.",
-            "image": "warg.svg",
-            "color": "#c6c7c9" 
+            "description": "It’s a fact that Jon has the ability to warg into his trusted dire wolf companion, ghost. At the end of the fifth book, as he lay bleeding out after being betrayed by the Night’s Watch, his last word is “Ghost”. It wouldn’t be crazy to assume Jon will return to us in the form of his hairy wingman."
         },
         {
+            "name": "walker",
             "title": "Rise as a white walker.",
-            "description": "With winter nearly here, it’s safe to say that the Night’s King and his army of white walkers may take the opportunity to make Jon one of their own. As rumor has it, the Night’s King himself is thought to be a Stark from the Age of Heroes turned soulless monster. He may have a special interest in claiming his namesake for his march of terror.",
-            "image": "walker.svg",
-            "color": "#a6dce8"
+            "description": "With winter nearly here, it’s safe to say that the Night’s King and his army of white walkers may take the opportunity to make Jon one of their own. As rumor has it, the Night’s King himself is thought to be a Stark from the Age of Heroes turned soulless monster. He may have a special interest in claiming his namesake for his march of terror."
         },
         {
+            "name": "red",
             "title": "Resurrected by Melisandre",
-            "description": "The Red Priestess, Melisandre believes in the legend of Azor Ahai, a champion who once saved the world long ago. It is written that he is destined to be reincarnated after a long summer to once again stand against the darkness. Given his display of strength against the walkers, Jon may not just be a hot piece to Melisandre, but also the champion destined to save Westeros whom she can raise from the dead.",
-            "color": "#ee3d3c",            
-            "image": "red.svg"
+            "description": "The Red Priestess, Melisandre believes in the legend of Azor Ahai, a champion who once saved the world long ago. It is written that he is destined to be reincarnated after a long summer to once again stand against the darkness. Given his display of strength against the walkers, Jon may not just be a hot piece to Melisandre, but also the champion destined to save Westeros whom she can raise from the dead."
         },
         {
+            "name": "dead",
             "title": "Nope, He's super dead.",
-            "description": "HBO would never lie to us. They’re a standup company who couldn’t even consider doing such a terrible thing. The leaked photos of Kit Harington on set are totally photoshopped, and the cast would have slipped up by now if there were any truth to this ridiculous farce. Put a cork in it!",
-            "image": "dead.svg",
-            "color": "#3f3f3f"
+            "description": "HBO would never lie to us. They’re a standup company who couldn’t even consider doing such a terrible thing. The leaked photos of Kit Harington on set are totally photoshopped, and the cast would have slipped up by now if there were any truth to this ridiculous farce. Put a cork in it!"
         }
     ]
 }

@@ -122,3 +122,10 @@ footer li {
 footer li:last-child {
     border-right: none;
 }
+
+
+@media(max-width: 800px) { 
+    #results .result {
+        width: 80%;
+    }
+}

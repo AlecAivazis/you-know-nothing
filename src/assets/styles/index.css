@@ -180,6 +180,11 @@ img.mountains {
 
 
 @media(max-width: 600px) {
+
+    .intro {
+        padding: 0;
+    }
+
     .voteOption {
         flex-direction: column;
         padding: 50px;

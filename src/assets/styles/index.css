@@ -182,6 +182,7 @@ img.mountains {
 @media(max-width: 600px) {
     .voteOption {
         flex-direction: column;
+        padding: 50px;
     }
     .voteOption.right {
         flex-direction: column;

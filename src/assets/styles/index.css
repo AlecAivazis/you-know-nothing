@@ -99,7 +99,7 @@ footer li:last-child {
 }
 
 .intro {
-    width: 520px;
+    max-width: 520px;
     text-align: center;
     padding: 50px;
     font-family: montserrat-light;

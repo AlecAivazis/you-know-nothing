@@ -121,6 +121,7 @@ img.mountains {
     display: flex;
     flex-grow: 1;
     padding: 100px;
+    justify-content: center;
 }
 
 .voteOption img {
@@ -165,6 +166,7 @@ img.mountains {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 480px;
 }
 
 .cta {

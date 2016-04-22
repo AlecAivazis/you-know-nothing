@@ -1,7 +1,7 @@
 extends base
 
-mixin test(title, description, id)
-  div(class=word)= title + ' ' + description
+block head 
+    link(rel="stylesheet", href="/static/styles/index.css")
     
 block content
     section#splash
@@ -18,3 +18,13 @@ block content
                 p.description= option.description
                 a(href="/vote?option=" + index)
                     button.cta(class=option.name) vote
+    footer
+        #credit
+            | A collaboration by:  
+            ul 
+                li 
+                    a(href="http://www.ashleyromo.com") Ashley Romo
+                li 
+                    a(href="http://www.charliemaynard.com") Charlie Maynard
+                li 
+                    a(href="http://alec.aivazis.com")  Alec Aivazis

@@ -1,7 +1,13 @@
 extends base
 
+block head 
+    link(rel="stylesheet", href="/static/styles/results.css")
+
 block content
-    div= data[0].count
-    div= data[1].count
-    div= data[2].count
-    div= data[3].count
+    header
+        img(src="/static/images/title.svg")
+    div#results
+        div= data[0].count
+        div= data[1].count
+        div= data[2].count
+        div= data[3].count

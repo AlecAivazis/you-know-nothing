@@ -1,3 +1,48 @@
+body {
+    background-color: #F5F5F5;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    font-family: montserrat-light;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+footer p {
+    font-family: montserrat-regular
+}
+
+footer a {
+    padding: 5px;
+    color: white;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+footer a:visited {
+    color: white;
+}
+
+footer ul {
+    margin-left: 10px;
+}
+
+footer ul, li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+footer li {
+    border-right: 1px solid white;
+}
+
+footer li:last-child {
+    border-right: none;
+}
+
 .warg {
     color: #393939;
     background-color: #BABBBD;
@@ -71,7 +116,7 @@ img.mountains {
 .voteOption {
     display: flex;
     flex-grow: 1;
-    padding: 50px;
+    padding: 100px;
 }
 
 .voteOption img {

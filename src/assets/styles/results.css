@@ -1,0 +1,21 @@
+body {
+    background-image: url(/static/images/snow/results/desktop.svg);
+    background-position: bottom center;
+    background-size: stretch;
+    text-align: center;
+}
+
+header {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    max-width: 520px;
+}
+
+#results {
+    margin-top: 50px;
+}

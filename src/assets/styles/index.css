@@ -102,13 +102,14 @@ footer li:last-child {
     text-align: center;
     padding: 50px;
     font-family: montserrat-light;
-    font-size: 14px;
+    font-size: 17px;
     line-height: 2.2;
     color: #4a4a4a;
+
 }
 
 img.splash {
-    max-height: 120px;
+    max-height: 180px;
 }
 
 img.mountains {

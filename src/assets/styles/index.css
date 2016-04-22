@@ -93,6 +93,8 @@ footer li:last-child {
     background-image: url(/static/images/snow/index/desktop.svg);
     background-position: bottom center;
     background-size: cover;
+    z-index: -1;
+    position: relative;
 }
 
 .intro {
@@ -111,6 +113,7 @@ img.splash {
 
 img.mountains {
     max-height: 160px;
+    margin-bottom: -15px;
 }
 
 .voteOption {

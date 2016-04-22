@@ -182,7 +182,7 @@ img.mountains {
 @media(max-width: 600px) {
 
     .intro {
-        padding: 0;
+        padding: 20px 0;
     }
 
     .voteOption {

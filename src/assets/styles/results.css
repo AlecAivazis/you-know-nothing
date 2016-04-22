@@ -64,16 +64,16 @@ header img {
 }
 
 .value.warg {
-    background-color: #BABBBD;
+    background-color: #c6c7c9;
 }
 .value.dead {
     background-color: #303030;
 }
 .value.walker {
-    background-color: #97D4E2;
+    background-color: #A6DCE8;
 }
 .value.red {
-    background-color: #E6242E;
+    background-color: #ee3d3c;
 }
 
 footer {

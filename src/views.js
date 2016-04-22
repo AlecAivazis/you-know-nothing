@@ -36,14 +36,15 @@ export const results = async (req, res) => {
 
     // add the count to the options
     const data = option_source['options'].map((entry, index) => ({
+
         ...entry,
-        count: counts[index]
+        count: counts[index] || 0
     }))
 
     // compute the necessary bits of data to produce the visualization
     const total = counts.reduce((prev, current) => prev + current, 0)
     const max = counts.reduce((prev, current) => current > prev ? current : prev, 0)
-
+    console.log(data.map(({count}) => ({count})))
     // render the template with the aggregated data
     return res.render('results.jade', {data, total, max})
 }

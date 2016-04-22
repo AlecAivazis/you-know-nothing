@@ -42,7 +42,7 @@ app.get('/vote', addVote)
 app.get('/', index)
 
 // interpret first arg from command line as port number
-const port = parseInt(process.argv[2])
+const port = process.env.PORT || parseInt(process.argv[2]) || 8000
 // listen on given port
 app.listen(port, () => console.log(`[${new Date()}] Now listening on port: ${port}`))
 

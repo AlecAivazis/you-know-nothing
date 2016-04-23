@@ -125,6 +125,14 @@ footer li:last-child {
 
 
 @media(max-width: 800px) { 
+    header img {
+        max-width: 200px;
+    }
+
+    #results {
+        margin-top: 0;
+    }
+
     #results .result {
         width: 80%;
     }

@@ -128,4 +128,8 @@ footer li:last-child {
     #results .result {
         width: 80%;
     }
+
+    #results img  {
+        display: none;
+    }
 }

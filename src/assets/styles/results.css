@@ -140,4 +140,8 @@ footer li:last-child {
     #results img  {
         display: none;
     }
+
+    .title {
+        text-align: left;
+    }
 }
